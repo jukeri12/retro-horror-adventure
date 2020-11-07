@@ -1,0 +1,59 @@
+{
+    "initial": {
+        "text": "Jonas Ledin, your 'boss' is sitting on his bed. He quickly lifts his face to you when you come in. 'Finally', Ledin says.",
+        "choices": [
+            {
+                "text": "Sorry, boss.", 
+                "response": "You reply, 'Sorry about that, I'll try not to be late next time.'"
+            },
+            {
+                "text": "Are we in a hurry?", 
+                "response": "You reply, 'It's not like we'll be seeing land in the next 6 hours...'"
+            }
+        ]
+    },
+    "introduction": {
+        "text": "'Listen here and listen closely', Ledin says. 'I know how to get the piece from the hold,\nbut it's going to be a tight schedule, and you know what they say about putting off stuff until the\n last minute?' Ledin looks at you intensely. 'Look, we need to be on the spot here to fence the piece or else we'll be caught\n and our balls let to hang dry, so focus.'",
+        "choices": [
+            {
+                "text": "Okay, I get it.", 
+                "response": "'Okay, I'm focusing. What's the plan?', you say."
+            }
+        ]
+    },
+    "introduction2": {
+        "text": "Ledin starts briefing you. 'Now I know how we can get to it easy, it's a window of about an hour, when the\n guards in the hold do their rotation. I have the key card, given by our mysterious benefactor,\n so this is actually going to be relatively easy. The hard part is cracking the strongbox, or\n coming up with some alternate way of fencing it. What we're going to do is, I'm going to go to the\n control room and tamper with the cameras when they begin the rotation. You're going to take this key and\n go to the hold and use your God-given talents to get the safe open and get the piece. There should be no\n guards or very few guards, so you'll have relative freedom to do your thing. Get back here once you get the piece.'\n",
+        "choices": [
+            {
+                "text": "What actually is 'the piece'?",
+                "conditions": ["askedaboutitem:is_false"], 
+                "response": "You ask, 'What are we really stealing? Usually we at least have an idea of what we're stealing...'", 
+                "effects": ["set:askedaboutitem_true"]
+            },
+            {
+                "text": "I need to fetch my tools.", 
+                "response": "'I just need to fetch my tools. Any other preps I should be doing?', you ask.",
+                "destination": "introduction3"
+            }
+        ]
+    },
+    "dontaskme": {
+        "text": "'I don't know. Why should we care? We're pros, and it's the perfect arrangement. We get a ton of money and a premade\n escape plan where we basically disappear into thin air as far as authorities are concerned. The details of the job are\n clear, we simply have to execute them. It's not our first time out there, so you should know how these can get sometimes.\n Anyway, this is rather, and apparently really rather shush-shush so we need to keep our mouths shut when we get this thing done.\n Let's mine this jackpot and go home pig rich!' Ledin almost shouts the last half of his speech, which makes you bit jittery and\n wondering if anyone heard his voice. YOu also wonder if someone could know about your plan? Something is a bit off.",
+        "choices": [
+            {
+                "text": "Fine, I get it.",
+                "response": "'Okay, I get it, no need to shout. I need to fetch my tools. Any other preps I should be doing?', you ask."
+            }
+        ]
+    },
+    "introduction3": {
+        "text": "'Well, fetch a good snack and keep your eyes and ears open. You never know what useful tidbits you might hear out there.\n Try to be quick, as I told you we don't have a ton of time. Come back here when you are ready and I'll give you the key card - \n after that it's go time so you better be fucking prepared!' Ledin's voice grows a bit intense.",
+        "choices": [
+            {
+                "text": "Alright.",
+                "response": "'I'll come back once I'm ready', You tell Ledin.",
+                "effects": ["exit"]
+            }
+        ]
+    }
+}

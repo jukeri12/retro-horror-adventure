@@ -1,0 +1,55 @@
+{
+    "initial": {
+        "text": "Hearing something rather weird inside the cabin door, you decide to...",
+        "choices": [
+            {
+                "text": "Knock on the door.", 
+                "response": "You knock on the door. It takes a while, but suddenly a series of loud noises\ncan be heard from inside the room."
+            },
+            {
+                "text": "Leave.", 
+                "response": "You decide to leave it alone. It's probably unimportant.",
+                "effects": ["exit"]
+            }
+        ]
+    },
+    "noises": {
+        "text": "The noises are quickly replaced by a silence. Something is off however. Then you notice that some\nsort of liquid is dripping from the seams of the door. A sort of static noise is filling the ambience.\nThe smell of sea air turns rancid. Something is happening...",
+        "choices": [
+            {
+                "text": "RUN", 
+                "response": "The lizard brain takes over. You have to run now. You can't stand being here.",
+                "effects": ["goto_outside"]
+            },
+            {
+                "text": "BREAKTHEDOOR", 
+                "response": "You feel like you have to do something. That there's something to stop, something to fight against\n, something annoying to put an end to. You kick and kick the door, over and over again, until\nfinally it breaks down. Your leg goes through, the splinters pressing into your leg.\nYou don't feel pain, but the bleeding is surprisingly heavy.Getting your leg out you focus on opening the door\nto hopefully rid the world of this disturbance.",
+				"effects": ["hit_1"]
+            }
+        ]
+    },
+    "inside1": {
+        "text": "Inside the room, it's not immediately obvious what is causing the disturbance.\nYou simply KNOW that there is a disturbance. You check the room, floor to ceiling, wall to wall. Inside cabinets, inside cupboards, even inside\nthe cabin toilet. The static is gradually turning into a music, that's just ever so slightly off.\nThen it hits you - the phone! The cabin phone is hanging from the wall mount. Every now and then, the dial buttons\n change appearance - the cord and the receiver turn into a sort of perverted flail. This is not natural. Something has decided to haunt and assault you, it seems.",
+		"choices": [
+			{
+				"text": "KILLITKILLITKILLIT", 
+				"response": "The noise is supremely annoying and somehow whatever it is perverts everything around it to\nsomething that should not be in this world. You have to get rid of it - swat it out like an annoying mosquito.\nIt's raising a lot of rage inside you, impairing your judgement: You can't kill it easily, yet it keeps taunting you.\nYou kick and bash the phone, and the plastic breaks into small pieces, but you can feel your energy sapped.\nIt's trying to eat you from the inside.",
+				"effects": ["hit_2"]
+			},
+			{
+				"text": "ICANSTILLRUN", 
+				"response": "It's too much. Your brain can't take it. It's hellishly annoying and rage-inducing\nyet all that sensation is overwhelming. You feel like a cat that's been played with too much and you simply want\n the annoying sensations to stop. You run, but your head hurts like hell.",
+				"effects": ["hit_1"]
+			}
+		]
+    },
+    "outside": {
+        "text": "The colors are returning to normal and the noise and the annoying feelings die down.\nThe rancid smell is leaving even if you can sort of feel it, even outside. ",
+		"choices": [
+			{
+				"text": "...what was that?", 
+				"response": "For a moment there, everything was off and you felt like you were turning to\nsomeone else entirely. You can't put your finger on it though and leave the thought to trail off\nas there is not much you think you can gain from pondering it anymore.",
+			}
+		]
+    }
+}

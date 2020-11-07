@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="WallLamp" type="Spatial"]
+
+[node name="Model" type="MeshInstance" parent="."]
+
+[node name="OmniLight" type="OmniLight" parent="."]
+light_color = Color( 0.988235, 1, 0.654902, 1 )

@@ -1,0 +1,25 @@
+{
+    "initial": {
+        "text": "Jonas Ledin, your 'boss' is sitting on his bed. He quickly lifts his face to you when you come in. 'Finally', Ledin says.",
+        "choices": [
+            {
+                "text": "Sorry, boss.", 
+                "response": "You reply, 'Sorry about that, I'll try not to be late next time.'"
+            },
+            {
+                "text": "Are we in a hurry?", 
+                "response": "You reply, 'It's not like we'll be seeing land in the next 6 hours...'"
+            }
+        ]
+    },
+    "quit": {
+        "text": "This is a test. Don't worry about me!",
+        "choices": [
+            {
+                "text": "Okay, boss.",
+                "response": "You quit.",
+                "effects": ["exit"]
+            }
+        ]
+    }
+}
