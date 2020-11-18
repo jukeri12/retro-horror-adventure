@@ -24,6 +24,17 @@ onready var jukebox = get_node("Music")
 func start_game():
 	# Initial setup
 	var player_ui_instance = player_ui_scene.instance()
+	
+	# TESTS
+	player_ui_instance.display_stats(
+		{"test": 5,
+		"asd": "asd",
+		"potentio": 123}
+	)
+	player_ui_instance.display_inventory_items(
+		["fork", "cigarette", "soda can"]
+	)
+	
 	add_child(player_ui_instance)
 
 	# Text adventure module setup

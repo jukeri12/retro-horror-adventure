@@ -176,15 +176,38 @@ func _response_and_effects(choice_data):
 	# If effects are defined, do something
 	if "effects" in choice_data:
 		var raw_effects_data = choice_data["effects"]
+		print(raw_effects_data)
 		for effect_text in raw_effects_data:
 			if effect_text == "exit":
-				# Quit text adventure section BEFORE final element
+				# TODO: Quit text adventure section BEFORE final element
 				pass
 				#exit_story()
 			# TODO: Add stat setting functionalities
 			if "damage:" in effect_text:
-				effect_text.split(":")
-				break
+				# "damage:X"
+				# Damage by amount X
+				var parts = effect_text.split(":")
+				var player = get_node(globals.PLAYER_OBJECT_MODULE)
+				player.damage(parts[1])
+				print("damage happens!")
+				continue
+			if "set:" in effect_text:
+				# "set:stat_X"
+				# Set player stat to X
+				var parts = effect_text.split(":")
+				var attribs = parts.split("_")
+				var attrib_to_set = attribs[0]
+				var attrib_new_val = attribs[1]
+				var player = get_node(globals.PLAYER_OBJECT_MODULE)
+				player.set_stat(attrib_to_set, attrib_new_val)
+				continue
+			if "operation:" in effect_text:
+				# "operation:stat_X_Y"
+				# Perform arithmetic on stat, operator X, value Y
+				var parts = effect_text.split(":")
+				var attribs = null
+			else:
+				print("WARNING: Effect not recognized!")
 
 func clean():
 	# Remove choices and story data
