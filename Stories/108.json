@@ -1,0 +1,90 @@
+{
+    "initial": {
+        "text": "This cabin door is slightly ajar. It occurs to you to take a peek, since you're a professional thief and all.\nYou may find some valuables inside. What greets you upon entry is a rather sordid sight; empty bottles upon empty bottles of alcohol, a violent smell of vomit and sweat\nand general dirtiness; telltale marks of heavy alcoholism. You don't think there's much to be found here at first: Then you notice one of the bottles giving off a blue flame.\nThe alcohol is burning; that's possibly dangerous and also rather weird. You could try to put it out, or you could always tell other people that you noticed the door being open, got worried and noticed the burning alcohol.",
+        "choices": [
+            {
+                "text": "Put out the flame and search the room.", 
+                "response": "There might still be something worthy in here, so you decide to search the room. To not draw attention, you decide to put out the burning alcohol. You notice a dirty spoon which you can use to restrict the oxygen to the bottle. Grabbing it and moving towards the bottle you notice the flame simmer down until it dies. The bottle was probably very close to being empty. No need to put it out then; just continue with searching the room. As expected, not much to be found here.",
+				"effects": ["exit"]
+            },
+			{
+                "text": "Leave, but alert others to the burning alcohol.", 
+                "response": "This does not really seem worth it; it's an alcoholic's room after all. You notify a crew member in the hallway corner about the burning alcohol, and go on your way.",
+				"effects": ["exit"]
+            }
+        ]
+    },
+    "darkness": {
+	    "text": "Suddenly, the room goes dark. Unnaturally dark - it is oppressive, heavy and seems to stretch everywhere. A few agonizing seconds later,\n fumbling your pockets for a lighter or any other light source, you notice blue flames in the darkness. Small and weak, but they are there - they seem to form a path.",
+		"choices": [
+		    {
+			    "text": "Follow the flames.",
+				"response": "You follow the flames, and the path lit by them seems to stretch for a small eternity. You are not sure what the ground is made of nor where you are - you only know that this place is not the alcoholic's cabin."
+			},
+			{
+				"conditions": ["has_lighter"],
+			    "text": "Try to find a way out.",
+				"response": "You decide that this place is the last place where you want to be right now. You feel like none of this is real; there must be some mechanism to escape this bizarre day dream. You start wandering around aimlessly, the blue flames tempting, not seeming to gain any distance even when you walk away from them. You check your pockets again and finally find your lighter."
+			}
+		]
+    },
+    "spirit1": {
+        "text": "At some point the flames go out entirely and for a beat, you are again enveloped by the dark. The oppressive darkness is suddenly broken\nby a cold blue light, reaching rather far away out, but never beating the darkness entirely. The flame is coming from\na gigantic glass jar; green and dense in color, that mangles and distorts your reflection. The flame\nseems to be alive, and suddenly it speaks. It is legion, and they speak about you, with heavy words, ones of failure, lack of confidence, lack of self-respect and emotional inavailability. They blame you for\nevery bad thing you've ever done or caused, minuscule or not, with no amnesty or respite given except for this:\n'Imbibe in us, and the path is clear. Confide in us, and we will listen and ease your burden. We only require loyalty\nin our developing personal relationship. In any case you no longer have anyone else to truly confide in. No one will accept you.' A bottle is in your hand.",
+		"choices": [
+		    {
+			    "text": "Down the bottle.",
+				"response": ""
+			},
+			{
+			    "text": "Resist the influence.",
+				"response": ""
+			}
+		]
+	},
+	"spirit2": {
+	    "text": "You suddenly find yourself in the alcoholic's cabin - but it is enveloped in a shimmering blue light. You turn around and see a blue flame\nhovering in the air. You can feel the fury and hate in the light and overpowering stench of hard liquour fills the air.\nThis is not your problem; but you know that whatever spirit this is, it is trying to pull at your strings with\nall the force it can muster. A headache is coming and feelings of guilt and anxiety wash over your body,\nand for a moment you feel you could stop the pain if you just engorged yourself in some drink.",
+		"choices": [
+		    {
+				"conditions": ["willpower:gte_5"],
+			    "text": "Resist. Don't give in.",
+				"response": "It takes some concerted effort, but as the feelings die down, so does the blue flame. You can't let the spirits control you; you are the rider, the one with agency, not alcohol. The spirits fade away and the smell of liquor slowly returns to what can be considered 'normal' for the cabin of an alcoholic person.",
+				"destination": "alcoholic"
+			},
+			{
+			    "text": "Find something to drink, anything to take this moment away.",
+				"response": "An unopened gin bottle is temptingly sticking out next to the night stand in this totalitarian scene of madness. No more thought; let it happen...",
+				"effects": ["damage:1"]
+			}
+		]
+	},
+	"influenced": {
+		"text": "The bottle is empty. Sitting on the bed, you realize that you don't even know what happened, but you feel piss drunk and generally like shit. All the horrible bad feelings have gone now, though. Not too much time has passed since you phased out. You confirm that this is the same alcoholic's cabin you went into before. You need to think a bit about what happened here. Something died inside, but you also feel like you are free of fear and anxiety. Was this the right choice?",
+		"choices": [
+			{
+				"text": "'It does not matter that much...'",
+				"response": "Nothing bad can happen right? It's just one bottle, after all. I've been so stressed out; I think I needed that.",
+				"effects": ["operation:willpower_-_2"]
+			},
+			{
+				"text": "'This was a bad idea...'",
+				"response": "No good. You shouldn't have done that. It endangered the operation and now I risk getting caught trespassing in someone else's cabin.",
+				"effects": ["operation:willpower_-_1"]
+			}
+		]
+	},
+	"alcoholic": {
+		"text": "Then the cabin door opens and in hobbles a man in a suit, who looks like he's been in the very deep end for months now. Cologne is not enough to cover the booze breath and it's clear he's been drinking. Realizing there's a trespasser in his cabin, the features in his face briefly flash confusion but suddenly they turn to a mellowed out angry face. Somewhat comical with how he has a hard time forming words and standing in one place. The accusations and insults are to be expected at this point and the man slowly seems to get a feel for them despite his level of intoxication. He gets a bit too close and starts shoving you around. You could easily shove him around, or excuse yourself and just try to get out. The man grabs an empty bottle.",
+		"choices": [
+			{
+				"text": "Excuse yourself.",
+				"response": "You try to tell him about the burning alcohol in his room, but he is beyond reasoning now. Heading for the door, you shrink from the man, covering your head because he is wildly flailing around with the bottle. The man finally manages to hit you rather hard on the head as you try to swing the cabin door open, shattering the bottle and leaving a few bleeding cuts in your head. They are not major, as head injuries bleed profusely, but it does look and feel nasty.",
+				"effects": ["damage:1"]
+			},
+			{
+				"text": "Tackle the man.",
+				"response": "This man doesn't look like he can really fight, so you decide to wrestle him. Not with too much force, but enough to get him out of the way and knock him out. It's risky and feels wrong, but as long as you don't kill him outright he might not interfere with the operation on the ship. However, when push comes to shove, he proves to be surprisingly strong, which means you have to exert some effort, and the whole situation deteriorates into chaos. It ends when you throw the man and he hits his head with force that you think was a bit too much; hopefully he won't die. You check his pulse and breathing and everything seems to be normal, so you lift him on his bed into a position where he should at least not choke in his own vomit, since there's a good chance that he might vomit during this force-induced nap. You leave, but you feel utterly bewildered by yourself.",
+				"effects": ["operation:willpower_-_1"],
+			}
+		]
+	}
+}

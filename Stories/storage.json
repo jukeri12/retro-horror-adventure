@@ -1,0 +1,17 @@
+{
+    "initial": {
+        "text": "This cabin door is slightly ajar. It occurs to you to take a peek, since you're a professional thief and all.\nYou may find some valuables inside. What greets you upon entry is a rather sordid sight; empty bottles upon empty bottles of alcohol, a violent smell of vomit and sweat\nand general dirtiness; telltale marks of heavy alcoholism. You don't think there's much to be found here at first: Then you notice one of the bottles giving off a blue flame.\nThe alcohol is burning; that's possibly dangerous and also rather weird. You could try to put it out, or you could always tell other people that you noticed the door being open, got worried and noticed the burning alcohol.",
+        "choices": [
+            {
+                "text": "Put out the flame and search the room.", 
+                "response": "There might still be something worthy in here, so you decide to search the room. To not draw attention, you decide to put out the burning alcohol. You notice a dirty spoon which you can use to restrict the oxygen to the bottle. Grabbing it and moving towards the bottle you notice the flame simmer down until it dies. The bottle was probably very close to being empty. No need to put it out then; just continue with searching the room.",
+				"effects": ["exit"]
+            },
+			{
+                "text": "Leave, but alert others to the burning alcohol.", 
+                "response": "This does not really seem worth it; it's an alcoholic's room after all. You notify a crew member in the hallway corner about the burning alcohol, and go on your way.",
+				"effects": ["exit"]
+            }
+        ]
+    }
+}

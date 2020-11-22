@@ -1,0 +1,37 @@
+{
+    "initial": {
+        "text": "The men's bathroom is well kept in this small ship. You take this moment to gather your thoughts.",
+        "choices": [
+            {
+                "text": "Wash your face", 
+                "response": "You sprinkle your face with cold water, to better prepare you for tonight's heist.",
+				"effects": ["operation:health_+_1", "exit"]
+            },
+			{
+                "text": "Go into an open stall and take a bathroom break.", 
+                "response": "As good time as any to take a leak. Why not a number two go with it?",
+				"effects": ["operation:health_+_1"]
+            },
+            {
+                "text": "Leave.", 
+                "response": "You decide to leave. Nothing much for you here.",
+                "effects": ["exit"]
+            }
+        ]
+    },
+    "visitors": {
+        "text": "After entering the bathroom stall, you hear more than one person coming in.They are rather loudly conversing about different matters on the ship.\nOne of the men lets his mouth go rather loudly about electronic locks on the ship; how they are 'unbreakable' and require a keycard. 'State of the art', he says.\nPeeking, you can see there are two men in the bathroom, and the other one is just going into one of the stalls, and the other one has just left his wallet on the bathroom sink.",
+        "choices": [
+            {
+				"conditions": ["dexterity:gte_5"],
+                "text": "Swipe the wallet", 
+                "response": "With a quick movement and deft fingers you swipe the wallet. On this small ship, no one really expects pickpockets,\nor their belongings stolen from a bathroom sink almost next to them. Their loss.",
+				"effects": ["gain_keycard", "gain_wallet"]
+            },
+            {
+                "text": "Do your business and exit the bathroom.", 
+                "response": "After your bathroom business, you leave the stall, wash your hands and exit the bathroom."
+            }
+        ]
+    },
+}

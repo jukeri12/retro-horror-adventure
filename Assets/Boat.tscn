@@ -212,6 +212,10 @@ adventure_file = "door"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22954, 0, 6.65222 )
 adventure_file = "bathroom"
 
+[node name="Cabin108" parent="Rooms" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09935, 0, 7.311 )
+adventure_file = "108"
+
 [node name="TextAdventure" parent="." instance=ExtResource( 5 )]
 visible = false
 
