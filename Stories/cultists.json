@@ -1,0 +1,78 @@
+{
+    "initial": {
+        "text": "The cabin 125 is peculiarly decorated with what looks like a victory garland.",
+        "choices": [
+            {
+                "text": "Listen through the door",
+                "response": "You put your ear on the door and listen, opting to know more before attempting to knock or otherwise get in. You hear mutters of somewhat weird nature, people speaking of a 'master', the 'one who knows'. Sounds like some sort of cultic stuff. What piques your interest is that they talk about a safe within cargo bay - could it be what you are looking to lift?",
+            },
+            {
+                "conditions": ["has_lockpick", "dexterity:gte_3"],
+                "text": "Break in.",
+                "response": "You decide to attempt to break in with your tools. It doesn't take long for you to realize that someone's inside and that this was a bad idea. You leave before the people in the cabin come out and manage to see your face. Good thing that you have some wits about you even with this rather dumb action you attempted.",
+                "effects": ["exit"]
+            },
+            {
+                "text": "Knock on the door.",
+                "response": "You knock on the door in the hopes of talking to or atleast seeing what kind of people are inside. This cabin has a rather peculiar air, after all.",
+                "destination": "talk"
+            },
+            {
+                "text": "Leave.",
+                "response": "You leave the cabin alone.",
+                "effects": ["exit"]
+            }
+        ]
+    },
+    "listener": {
+        "text": "After listening, they seem to quiet for a moment. Then the noise picks up and it seems they are about to get a move on. You get away from the door so they can not see you. These people look rather normal exiting the room - the only interesting thing about them is the 'victory garland' tattoo on their necks and cheeks. You now have a chance to get inside the cabin, if you want.",
+        "choices": [
+            {
+				        "conditions": ["has_lockpick"],
+                "text": "Break in.",
+                "response": "It's really rather easy to break in into these cabins. A deft wrist and the proper tool is all it takes, and in you are.",
+            },
+            {
+                "text": "Leave.",
+                "response": "You decide not to enter. The thought lingers: who are these people?",
+                "effects": ["exit"]
+            },
+        ]
+    },
+    "inside": {
+      "text": "This cabin has it all - masks, robes, bizarre tomes, candles and incenses of various colors and smells, ritual implements - and a good deal of weapons; knives, machetes, handguns, submachine guns and even smoke grenades. All this is cause for concern - who are these people? If they are indeed looking out for the item you are supposed to pilfer then your task suddenly got very dangerous. This is something you need to consider carefully.",
+      "choices": [
+          {
+              "conditions": ["perception:4"],
+              "text": "Search the room for clues.",
+              "response": "Trying to read these obscure books yields little to you, save for a lot of references to 'the philosophy of knowledge' and 'the one who knows' - which seems to be something like a god to these people. A stack of papers which are titled 'sacrificial contract' is on the table, which is basically a map of the ship's route, along side it a drawing of some unknown object with undecipherable diagrams and letters around it. You take one copy for safekeeping. The guns pique your interest, but you decide not to take one, so it does not arouse suspicion or otherwise cause problems along the way.",
+              "effects": ["gain_contract", "exit"]
+          },
+          {
+              "text": "Leave.",
+              "response": "You decide to leave before you are caught.",
+              "effects": ["exit"]
+          },
+      ]
+    },
+    "talk": {
+      "text": "An intimidating man in bizarre gold and white garbs opens the door and asks you, 'what do you want?' You immediately register the 'victory garland' tattoo on his cheek. It takes you second too long to answer and the man quips: 'do not toy with us. If you are not here for a reason, then leave immediately or hell will be paid.' The intense tone in the threat makes you feel minuscule.",
+      "choices": [
+        {
+          "conditions": ["charisma:5", "has_medallion"],
+          "text": "(Show garland medallion) Tell them that you are one of them.",
+          "response": "You tell them that you are one of them. They eye you warily, for a moment too long, and the possibility that they recognize you crosses your mind. They eventually let you in, not saying much anything. They simply keep staring at you with threatening looks, but they don't seem to be about to tear you a new one at least. You eye the items on display trying to come up with anything to say. Improvising, you come up with a half-truth about thieves on the ship - true, since you are a thief, but you are not really talking about yourself - and one of them dismisses the notion, saying 'no thief will take our sacred images. He knows, thus he protects.' This is very ominous. You are handed a copy of a paper titled 'sacrificial contract' - looks like a map of the ship's route with a drawing of a weird object with weird diagrams and letters around it. You are told to keep the plan in mind and 'to know your enemy'. You have no idea who the enemy referred here is. With an apologetic nod, you take your leave of the cabin.",
+          "effects": ["gain_contract"]
+        },
+        {
+          "text": "Try to come up with something to say.",
+          "response": "You struggle to come up with something to say to these people. As you mutter something, a punch comes to your gut and then a kick to your face and very soon you are lying on your back in the floor. You hear the man say 'you knew what was coming' and then he threatens you and tells you to never come back unless you want to throw away your life. You think it genuinely best to leave them alone.",
+          "effects": ["damage_2"]
+        },
+        {
+          "text": "Tell them it was the wrong door and leave.",
+          "response": "These people are very intense and suspicious. They will scrutinize every detail given to them, you can tell by looking at their faces. You decide to leave before the situation deteriorates rapidly."
+        }
+      ]
+    }
+}
